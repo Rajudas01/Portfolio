@@ -1,0 +1,231 @@
+/* General Styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* About Section */
+#about {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #444;
+    margin-bottom: 25px;
+}
+
+/* Education Table */
+.education {
+    margin-bottom: 40px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 1.2rem;
+}
+
+th, td {
+    padding: 20px; /* Increased padding */
+    border: 2px solid #ddd; /* Thicker border */
+    text-align: center;
+}
+
+th {
+    background: #333;
+    color: white;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+td {
+    font-size: 1.2rem;
+}
+
+tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+/* Increase Column Width */
+th:nth-child(1), td:nth-child(1) { width: 30%; } /* Degree Column */
+th:nth-child(2), td:nth-child(2) { width: 35%; } /* Institution Column */
+th:nth-child(3), td:nth-child(3) { width: 20%; } /* Year Column */
+th:nth-child(4), td:nth-child(4) { width: 15%; } /* CGPA Column */
+
+/* Hobbies Section */
+.hobbies {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: center;
+    color: white;
+}
+
+.hobbies h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hobbies ul {
+    list-style: none;
+    padding: 0;
+}
+
+.hobbies ul li {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    margin: 10px 0;
+    transition: transform 0.3s ease-in-out, background 0.3s;
+}
+
+.hobbies ul li i {
+    font-size: 22px;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.hobbies ul li:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.hobbies ul li:hover i {
+    transform: rotate(10deg);
+}
+
+/* Hidden Section Animation */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: background 0.3s ease;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.profile-pic {
+    width: 80px;  /* Adjust size as needed */
+    height: 80px;
+    border-radius: 50%; /* Makes it circular */
+    margin-right: 5px;
+    margin-left: 0px;
+    justify-content: flex-start;
+}
+.nav {
+    display: flex;
+    justify-content: flex-end; /* Aligns items to the right */
+    background-color: #f8f8f8; /* Light background */
+    padding: 15px 150px;
+    width: 100%;
+    background-color: transparent;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0; /* Remove default margin */
+    padding: 0;
+    gap: 20px;
+}
+.nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav ul li a:hover {
+    color: firebrick; /* Change color on hover */
+}
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        color: black;
+    }
+
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        background: #222;
+        position: absolute;
+        width: 100%;
+        top: 50px;
+        left: 0;
+        text-align: center;
+    }
+
+    .nav ul.show {
+        display: flex;
+    }
+
+    .nav ul li {
+        padding: 10px 0;
+    }
+}
